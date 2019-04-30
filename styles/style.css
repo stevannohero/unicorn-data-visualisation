@@ -1,3 +1,8 @@
-h1 {
-  color: #4172c1 !important;
+p {
+  color: #f9dc9d;
+}
+
+#banner {
+  width: 100%;
+  height: auto;
 }
