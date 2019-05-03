@@ -1,8 +1,28 @@
-p {
-  color: #f9dc9d;
-}
-
 #banner {
   width: 100%;
   height: auto;
+}
+
+#footer-img {
+  width: 100%;
+  height: auto;
+}
+
+.def-section {
+  min-height: 200px;
+  background-color: #acace5;
+}
+
+.chart-section {
+  min-height: 550px;
+}
+
+.info-section {
+  min-height: 450px;
+  background-color: #f8f8f8;
+}
+
+.footer-section {
+  height: auto;
+  background-color: #f8f8f8;
 }
