@@ -3,12 +3,12 @@
 <head>
   <title>The Unicorns</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link rel="stylesheet" type="text/css" href="/static/style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
   <div class="landing-section">
-    <img id="banner" src="images/banner.jpg">
+    <img id="banner" src="/static/images/banner.jpg">
   </div>
   <div class="def-section">
     <div class="container">
@@ -44,24 +44,46 @@
       <div class="tab-content">
         <div id="gojek-tab" class="tab-pane fade in active">
           <p>Gojek</p>
+          <div id="gojek-viz">
+          </div>
         </div>
         <div id="tokped-tab" class="tab-pane fade">
           <p>Tokopedia</p>
+          <div id="tokopedia-viz">
+          </div>
         </div>
+        
         <div id="travel-tab" class="tab-pane fade">
           <p>Traveloka</p>
+          <div id="traveloka-viz">
+          </div>
         </div>
         <div id="bl-tab" class="tab-pane fade">
           <p>Bukalapak</p>
+          <div id="bukalapak-viz">
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div class="footer-section">
-    <img id="footer-img" src="images/footer.jpg">
+    <img id="footer-img" src="/static/images/footer.jpg">
   </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<script type="text/javascript">
+  var traveloka_graph = {{graphJSON['traveloka'] | safe}}
+  Plotly.plot('traveloka-viz',traveloka_graph,{})   
+  var bukalapak_graph = {{graphJSON['bukalapak'] | safe}}
+  Plotly.plot('bukalapak-viz',bukalapak_graph,{})  
+  var gojek_graph = {{graphJSON['gojek'] | safe}}
+  Plotly.plot('gojek-viz',gojek_graph,{})   
+  var tokopedia_graph = {{graphJSON['tokopedia'] | safe}}
+  Plotly.plot('tokopedia-viz',tokopedia_graph,{})     
+</script>
+
 </html>
