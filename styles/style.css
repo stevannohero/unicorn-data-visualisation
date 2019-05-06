@@ -20,6 +20,12 @@
   text-align: center;
 }
 
+.vl {
+  border: 2px solid white;
+  border-radius: 25px;
+  height: 150px;
+}
+
 .chart-section {
   min-height: 550px;
 }
@@ -31,10 +37,4 @@
 .footer-section {
   height: auto;
   background-color: #f8f8f8;
-}
-
-.vl {
-  border-left: 5px solid white;
-  border-radius: 25px;
-  height: 150px;
 }
