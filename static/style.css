@@ -8,9 +8,24 @@
   height: auto;
 }
 
+body {
+  align-items: center;
+}
+
+.desc-section {
+  min-height: 200px;
+  background-color: white;
+}
+
 .def-section {
   min-height: 200px;
   background-color: #acace5;
+}
+
+.vl {
+  border: 2px solid white;
+  border-radius: 25px;
+  height: 150px;
 }
 
 .chart-section {
