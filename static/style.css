@@ -8,18 +8,16 @@
   height: auto;
 }
 
-body {
-  align-items: center;
-}
-
 .desc-section {
   min-height: 200px;
   background-color: white;
+  text-align: center;
 }
 
 .def-section {
   min-height: 200px;
   background-color: #acace5;
+  text-align: center;
 }
 
 .vl {
