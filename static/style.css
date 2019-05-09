@@ -8,6 +8,40 @@
   height: auto;
 }
 
+.nav-item .active {
+  background-color: #7d7cbb !important;
+}
+
+.nav-tabs .nav-link.active {
+  color: white !important;
+}
+
+.nav-link {
+  color: black !important;
+}
+
+.card {
+  margin: 50px 0px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+  border: solid 1px #ffffff;
+}
+
+.card-header {
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: 3.8px;
+  color: white;
+  background-color: #7d7cbb !important;
+}
+
+.card img {
+  max-height: 20px;
+  margin-right: 10px;
+}
+
 .desc-section {
   min-height: 200px;
   background-color: white;
@@ -32,6 +66,8 @@
 
 .info-section {
   min-height: 450px;
+  background-color: #f8f8f8;
+  padding-top: 30px;
 }
 
 .footer-section {
