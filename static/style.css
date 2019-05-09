@@ -38,3 +38,7 @@
   height: auto;
   background-color: #f8f8f8;
 }
+
+.card-text {
+  font-size: 24pt;
+}
