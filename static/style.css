@@ -1,4 +1,11 @@
-#banner {
+#see-charts {
+  position: static;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.banner {
   width: 100%;
   height: auto;
 }
@@ -43,21 +50,42 @@
 }
 
 .desc-section {
-  min-height: 200px;
+  min-height: 100px;
   background-color: white;
   text-align: center;
 }
 
 .def-section {
-  min-height: 200px;
+  min-height: 150px;
   background-color: #acace5;
   text-align: center;
+}
+
+.def-section .container {
+  position: relative;
+}
+
+.def-title p {
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: 3.8px;
+  color: #f9dc9d;
+}
+
+.row .def-content {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .vl {
   border: 2px solid white;
   border-radius: 25px;
-  height: 150px;
+  height: 120px;
 }
 
 .chart-section {
