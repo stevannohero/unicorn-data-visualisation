@@ -18,9 +18,9 @@ def get_graph(filename,known_color,unknown_color,unknown_fund_size,scaler):
 	bubble_text=[]
 	for i in range(len(funding_round)):
 		if str(size[i])=='nan':
-			bubble_text.append(funding_round[i]+"<br>Undisclosed")
+			bubble_text.append(funding_round[i]+"<br>"+str(bubble_date[i])+"<br><br>Undisclosed")
 		else:
-			bubble_text.append(funding_round[i]+"<br>$"+str(size[i])+" M")
+			bubble_text.append(funding_round[i]+"<br>"+str(bubble_date[i])+"<br><br>$"+str(size[i])+" M")
 
 
 	trace0 = go.Scatter(
