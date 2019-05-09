@@ -12,8 +12,8 @@ app = Flask(__name__)
 def hello():
 	graphJSON = {}
 	graphJSON['traveloka'] = get_graph("traveloka.csv",'rgb(93, 164, 214)','rgb(93, 93, 93)',100,3)
-	graphJSON['bukalapak'] = get_graph("bukalapak.csv",'rgb(93, 164, 214)','rgb(93, 93, 93)',10,3)
-	graphJSON['gojek'] = get_graph("gojek.csv",'rgb(93, 164, 214)','rgb(93, 93, 93)',150,4)
-	graphJSON['tokopedia'] = get_graph("tokopedia.csv",'rgb(93, 164, 214)','rgb(93, 93, 93)',150,4)
+	graphJSON['bukalapak'] = get_graph("bukalapak.csv",'rgb(93, 164, 214)','rgb(93, 93, 93)',50,1)
+	graphJSON['gojek'] = get_graph("gojek.csv",'rgb(93, 164, 214)','rgb(93, 93, 93)',150,5)
+	graphJSON['tokopedia'] = get_graph("tokopedia.csv",'rgb(93, 164, 214)','rgb(93, 93, 93)',150,5)
 	return render_template('index.html',graphJSON=graphJSON)
 	# return render_template('index.html')

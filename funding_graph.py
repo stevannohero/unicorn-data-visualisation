@@ -6,18 +6,22 @@ import json
 
 def get_graph(filename,known_color,unknown_color,unknown_fund_size,scaler):
 	dataset = pd.read_csv(filename)
-	known_color = 'rgb(93, 164, 214)'
-	unknown_color = 'rgb(93, 93, 93)'
 	n_funding = len(dataset)
 	unknown_code = -1
-	unknown_fund_size=100
-	scaler = 3
 
 	funding_amount = dataset['Amount'].fillna(unknown_code).tolist()
 	bubble_size = [s/scaler if s!=-1 else s*unknown_fund_size*-1/scaler for s in funding_amount ]
 	bubble_color = [known_color if s!=-1 else unknown_color for s in funding_amount ]
 	bubble_date = dataset['Date'].tolist()
-	bubble_text = dataset['Round'].tolist()
+	funding_round = dataset['Round'].tolist()
+	size = dataset['Amount'].tolist()
+	bubble_text=[]
+	for i in range(len(funding_round)):
+		if str(size[i])=='nan':
+			bubble_text.append(funding_round[i]+"<br>Undisclosed")
+		else:
+			bubble_text.append(funding_round[i]+"<br>$"+str(size[i])+" M")
+
 
 	trace0 = go.Scatter(
 		text=bubble_text,
@@ -41,9 +45,9 @@ def get_graph(filename,known_color,unknown_color,unknown_fund_size,scaler):
 		),
 		yaxis=dict(
 			ticks='',
-	        showgrid=False,
-	        zeroline=False,
-	        showline=False,
+			showgrid=False,
+			zeroline=False,
+			showline=False,
 			showticklabels=False
 		),
 		
