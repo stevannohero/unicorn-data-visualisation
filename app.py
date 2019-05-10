@@ -6,9 +6,9 @@ import pandas as pd
 import json
 from funding_graph import *
 
-app = Flask(__name__)
+application = Flask(__name__)
 
-@app.route("/")
+@application.route("/")
 def hello():
 	graphJSON = {}
 	graphJSON['traveloka'] = get_graph("traveloka.csv",'rgb(249,220,157)','rgb(140, 140, 140)',100,3)
